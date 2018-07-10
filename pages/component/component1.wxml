@@ -1,0 +1,7 @@
+<!--pages/component/component1.wxml-->
+<view class="wrapper">
+  <slot name="first"></slot>
+  <view bindtap='myevent'>组件1</view>
+  <slot name="second"></slot>
+  <dd></dd>
+</view>

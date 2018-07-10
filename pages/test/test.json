@@ -1,0 +1,10 @@
+{"backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "微信测试",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "component": true,
+  "usingComponents": {
+    "aa":"./../component/component1"
+  }
+  }

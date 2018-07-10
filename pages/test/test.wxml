@@ -1,0 +1,34 @@
+<!--pages/test/test.wxml-->
+<wxs src="./../../module/test.wxs" module="tools" />
+<view class="section">
+  <view class="section__title">vertical scroll</view>
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view </button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+  </view>
+</view>
+<view>{{tools.a}}</view>
+<aa id="aa" innerText="传递值" bind:myevent="onMyEvent">  
+<!--这里给组件传递值需要和组件的Propties里面的属性名一样，不然组件接收不到值,当子组件触发myevent函数就会监听到并运行onMyEvent函数  -->
+  <image src="./../../static/image/user.default.png" slot="first"></image>    
+  <!--当组件开启了多槽口，在调用的地方如果不指定槽口名是找不到输出位置的;  -->
+  <text slot="second" class="nn">槽口指定名</text>
+</aa>
+<text bindtap='componentTest'>{{userName}}</text>
+
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red"  class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>

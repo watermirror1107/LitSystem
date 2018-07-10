@@ -1,0 +1,5 @@
+/* pages/test/test.wxss */
+.bc_green{background-color: green;height:200px;}
+.bc_red{background-color: red;height:200px;}
+.bc_yellow{background-color: yellow;height:200px;}
+.bc_blue{background-color: blue;height:200px;}

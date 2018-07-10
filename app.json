@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color":"blue",
+    "selectedColor":"black",
+    "backgroundColor":"yellow",
+    "borderStyle":"black",
+    "position":"botton",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "static/image/icon-bar.png",
+      "selectedIconPath": "static/image/user.default.png"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "日志",
+      "iconPath": "static/image/icon-bar.png",
+      "selectedIconPath": "static/image/user.default.png"
+    },
+    {
+      "pagePath": "pages/test/test",
+      "text": "测试",
+      "iconPath": "static/image/icon-bar.png",
+      "selectedIconPath": "static/image/user.default.png"
+    }
+    ]
+  },
+  "debug":false
+}

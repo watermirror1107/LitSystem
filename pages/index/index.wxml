@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}\n{{num1+num2}}</text>
+    <text class="user-motto" data-nn="3" style='background-color:green;font-size:50rpx;' bindtap="test">自定义属性</text>
+  </view>
+</view>
+<button bindtap="changeNum" style="width:100px;">改变数字{{num2}}</button>
+<view wx:if="{{num2==0}}">0</view>
+<view wx:elif="{{num2==1}}">1</view>
+<view wx:elif="{{num2==2}}">2</view>
+<view wx:else>3</view>
+<view id="item-{{id}}"> 123</view>
+<checkbox checked="{{false}}"></checkbox>
+<view hidden="{{kg && length>5}}">开关</view>
+<block wx:for="{{litArr}}" wx:key="key">
+  <text>{{item}}</text>
+</block>
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+<view hover-class="green" hover-start-time="500" hover-stay-time="2000">长按变色</view>
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
+
